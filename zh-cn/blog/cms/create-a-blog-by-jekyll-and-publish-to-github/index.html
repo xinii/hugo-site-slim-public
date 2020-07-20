@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>通过 Jekyll 创建博客并发布到 Github - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/zh-cn/post/create-a-blog-by-jekyll-and-publish-to-github" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="通过 Jekyll 创建博客并发布到 Github">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="通过 Jekyll 创建博客并发布到 Github">
 <meta itemprop="description" content="希望拥有一个自己的博客但不知如何创建？试试 Github 原生支持的 Jekyll 吧！">
 <meta itemprop="datePublished" content="2019-04-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-04-02T00:00:00&#43;00:00" />
@@ -285,25 +286,23 @@
 </nav>
     <hr>
     
+<div id="outline-container-安装-jekyll" class="outline-2">
 <h2 id="安装-jekyll">
 安装 Jekyll<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
 </h2>
+<div id="outline-text-安装-jekyll" class="outline-text-2">
 <p>
-Jekyll 是一个通过 Ruby 语言写的静态网站生成框架，下面是官网介绍。
-</p>
+Jekyll 是一个通过 Ruby 语言写的静态网站生成框架，下面是官网介绍。</p>
 <blockquote>
-<p>
-Jekyll is a static site generator. You give it text written in your
+<p>Jekyll is a static site generator. You give it text written in your
   favorite markup language and it uses layouts to create a static
   website. You can tweak how you want the site URLs to look, what data
-  gets displayed on the site, and more. –Jekyll<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
-</p>
+  gets displayed on the site, and more. –Jekyll<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
 </blockquote>
 <p>
 安装 Jekyll 时，首先需要一个 Ruby 的包管理环境， Ruby
 编程环境的常用包管理器为 <code>gem</code> ， 例如 Ubuntu
-中执行下面的语句则会同时安装 <code>gem</code> 。
-</p>
+中执行下面的语句则会同时安装 <code>gem</code> 。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  apt install ruby-dev</code></pre></div>
 </div>
@@ -311,70 +310,62 @@ Jekyll is a static site generator. You give it text written in your
 安装好 <code class="verbatim">gem</code> 之后，确保它的执行路径在我们的 <code class="verbatim">PATH</code> 环境变量中。
 如果不上采用上述方式，而是使用了 <code class="verbatim">rbenv</code> 等虚拟环境管理工具的话，
 只要调用虚拟环境下配置好的 <code class="verbatim">gem</code> 就可以了。
-随后便可以通过执行下面的语句来安装Jekyll，是不是很简单呢？
-</p>
+随后便可以通过执行下面的语句来安装Jekyll，是不是很简单呢？</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  gem install jekyll</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-发布博客到-github" class="outline-2">
 <h2 id="发布博客到-github">
 发布博客到 Github
 </h2>
+<div id="outline-text-发布博客到-github" class="outline-text-2">
 <p>
 安装好 Jekyll 之后， 一定是希望先把随便什么内容发布到 Github
-上看看效果的哈， 特别能理解这种心情。
-</p>
+上看看效果的哈， 特别能理解这种心情。</p>
 <p>
 那么接下来，在实际写博客之前， 我们首先用安装好的 Jekyll
 生成一个默认站点并将其发布到 Github。
-在希望在本地管理博客的路径下执行下面的语句。
-</p>
+在希望在本地管理博客的路径下执行下面的语句。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  jekyll new folder-name-for-your-blog</code></pre></div>
 </div>
 <p>
 随后在当前路径下会生成一个叫做 <code class="verbatim">folder-name-for-your-blog</code> 的文件夹，
-这里面便是 Jekyll 新建的博客源码。
-</p>
+这里面便是 Jekyll 新建的博客源码。</p>
 <p>
 然后在 Github 上创建一个叫做 <code class="verbatim">your-user-name-of-github.github.io</code>
 的仓库。 创建好新的仓库后，Github 会提示如何通过 <code class="verbatim">git</code> 来 <code class="verbatim">push</code>
 本地内容到该仓库。 按着所提示的向导将刚创建好的
-<code class="verbatim">folder-name-for-your-blog</code> 的内容 <code class="verbatim">push</code> 到这个仓库。
-</p>
+<code class="verbatim">folder-name-for-your-blog</code> 的内容 <code class="verbatim">push</code> 到这个仓库。</p>
 <p>
 随后等几分钟通过浏览器打开 <code class="verbatim">your-user-name-of-github.github.io</code> ，
-不出意外的话即可看到 Jekyll 的欢迎页面。
-</p>
+不出意外的话即可看到 Jekyll 的欢迎页面。</p>
 <p>
-<del>本站也是通过以上方式创建。</del>
-</p>
+<del>本站也是通过以上方式创建。</del></p>
 <p>
-（2020年6月14日追记）
-</p>
+（2020年6月14日追记）</p>
 <p>
 <a href="https://xinii.github.io">本站</a>现已改用 <code>hugo</code> 静态网站生成框架创建，
-如需参考原来的站点，请<a href="https://xinii.github.io/jekyll-blog">点击这里</a>访问。
-</p>
+如需参考原来的站点，请<a href="https://xinii.github.io/jekyll-blog">点击这里</a>访问。</p>
 <p>
-欢迎联络并留言。
-</p>
+欢迎联络并留言。</p>
+</div>
+</div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-red-transparent.png">Jekyll 的 Logo</a>
-</p>
+<p><a href="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-red-transparent.png">Jekyll 的 Logo</a></p>
 </div>
 </div>
 <div class="footnote-definition">
 <sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://jekyllrb.com/docs/">jekyllrb.com</a>
-</p>
+<p><a href="https://jekyllrb.com/docs/">jekyllrb.com</a></p>
 </div>
 </div>
 </div>
@@ -740,7 +731,7 @@ Jekyll is a static site generator. You give it text written in your
         xin iDEA iNNATA
       
     . <br>
-    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.73.0'>Hugo</a> 驱动
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.74.1'>Hugo</a> 驱动
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>EmacsのOrg-modeにおいてPythonコードブロックを使った時の落とし穴 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/pitfall-while-using-python-code-block-on-emacs-org-mode" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="EmacsのOrg-modeにおいてPythonコードブロックを使った時の落とし穴">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="EmacsのOrg-modeにおいてPythonコードブロックを使った時の落とし穴">
 <meta itemprop="description" content="EmacsのOrg-modeが必要に便利なツールで，そのままコードをコンパイルできることが魅力的。ただPythonを使う際に落とし穴がある，一緒に見てみよう！">
 <meta itemprop="datePublished" content="2019-11-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-23T00:00:00&#43;00:00" />
@@ -280,24 +281,20 @@
     <hr>
     <p>
 僕は家計簿をOrg-modeで記録しています，
-しかし，以下のエラーが出たことがある。
-</p>
+しかし，以下のエラーが出たことがある。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">File &#34;&lt;stdin&gt;&#34;, line 3
 SyntaxError: Non-UTF-8 code starting with &#39;\xe3&#39; in file &lt;stdin&gt; on line 3, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details</code></pre></div>
 </div>
 <p>
-例の <code># -*- coding: utf-8 -*-</code> を先頭につけてもダメです。
-</p>
+例の <code># -*- coding: utf-8 -*-</code> を先頭につけてもダメです。</p>
 <p>
-解決法は以下のようなコードブロックのヘッダーを，
-</p>
+解決法は以下のようなコードブロックのヘッダーを，</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">#+begin_src python :results file :var data=test</code></pre></div>
 </div>
 <p>
-以下のように変換します。
-</p>
+以下のように変換します。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">#+begin_src python :results file :var data=test[, 0:2]</code></pre></div>
 </div>
@@ -306,8 +303,7 @@ SyntaxError: Non-UTF-8 code starting with &#39;\xe3&#39; in file &lt;stdin&gt; o
 pythonに転送すると，以上の問題が解決できますが，
 根本的に <code># -*- coding: utf-8 -*-</code> をコードブロックの中に
 効く方法はまだわかりません。
-わかる方は教えていただければありがたいと思います。
-</p>
+わかる方は教えていただければありがたいと思います。</p>
 
   </div>
   <hr>
@@ -741,7 +737,7 @@ pythonに転送すると，以上の問題が解決できますが，
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

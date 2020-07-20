@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>Several SSH configurations - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/en/post/several-ssh-configurations" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Several SSH configurations">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="Several SSH configurations">
 <meta itemprop="description" content="Very headache for the ssh interruption phenomenon? Want to set an ssh daemon on android by termux? Take a look at this article.">
 <meta itemprop="datePublished" content="2020-06-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-03T00:00:00&#43;00:00" />
@@ -303,37 +304,33 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 SSH interruption phenomenon
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <ul>
 <li>
-<p>
-When logging in to a remote server with ssh,
+<p>When logging in to a remote server with ssh,
 <code class="verbatim">Write failed: Broken pipe</code> may be displayed and the connection may be
-broken.
-</p>
+broken.</p>
 </li>
 <li>
-<p>
-It is necessary to change the ssh setting on the client side or the
+<p>It is necessary to change the ssh setting on the client side or the
 server side, because ssh is automatically disconnected by a timeout if
-it is not operated for a while.
-</p>
+it is not operated for a while.</p>
+<div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
 Remedy
 </h3>
+</div>
 </li>
 <li>
-<p>
-Deal on the client side
-</p>
+<p>Deal on the client side</p>
 </li>
 </ul>
-<p>
-Describe the following contents in <code class="verbatim">/etc/ssh/ssh_config</code> or
-<code class="verbatim">~/.ssh/config</code>
-</p>
+<p>Describe the following contents in <code class="verbatim">/etc/ssh/ssh_config</code> or
+<code class="verbatim">~/.ssh/config</code></p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  ServerAliveInterval <span style="color:#ae81ff">15</span>
   ServerAliveCountMax <span style="color:#ae81ff">10</span></code></pre></div>
@@ -341,72 +338,94 @@ Describe the following contents in <code class="verbatim">/etc/ssh/ssh_config</c
 <p>
 With this setting, 10 times response confirmation will send to the
 server every 15 seconds, and if there is still no response, it times
-out.
-</p>
+out.</p>
 <ul>
 <li>
-<p>
-Deal on the server side
-</p>
+<p>Deal on the server side</p>
 </li>
 </ul>
-<p>
-Describe the following contents in <code class="verbatim">/etc/ssh/sshd_config</code>
-</p>
+<p>Describe the following contents in <code class="verbatim">/etc/ssh/sshd_config</code></p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  ClientAliveInterval <span style="color:#ae81ff">30</span>
   ClientAliveCountMax <span style="color:#ae81ff">5</span></code></pre></div>
 </div>
 <p>
 With this setting, 5 times response confirmation will send to the client
-every 30 seconds, and if there is still no response, it times out.
-</p>
+every 30 seconds, and if there is still no response, it times out.</p>
+<div id="outline-container-headline-3" class="outline-3">
 <h3 id="headline-3">
 One more thing
 </h3>
+<div id="outline-text-headline-3" class="outline-text-3">
 <p>
 It is recommended to use tools such as tmux or screen, so that even if
 the connection is lost halfway, you can log in to the remote server
-again and attach the previous session.
-</p>
+again and attach the previous session.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 SSH daemon on android by termux
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<div id="outline-container-headline-5" class="outline-3">
 <h3 id="headline-5">
 Installation
 </h3>
+<div id="outline-text-headline-5" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  apt install openssh</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 Setting the key
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  ssh-keygen
   cat ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys
   chmod <span style="color:#ae81ff">600</span> ~/.ssh/authorized_keys
   chmod <span style="color:#ae81ff">700</span> ~/.ssh</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
 <h3 id="headline-7">
 Start daemon in debug mode
 </h3>
+<div id="outline-text-headline-7" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  sshd -d</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-3">
 <h3 id="headline-8">
 Start daemon
 </h3>
+<div id="outline-text-headline-8" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  sshd</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-3">
 <h3 id="headline-9">
 Login on the PC side
 </h3>
+<div id="outline-text-headline-9" class="outline-text-3">
 <p>
 Set the private key <code class="verbatim">~/.ssh/id_rsa</code> generated on the android side in the
 SSH client of the PC side, and connect to the server on android with
-specifying IP and port <code class="verbatim">8022</code> and without a username.
-</p>
+specifying IP and port <code class="verbatim">8022</code> and without a username.</p>
+</div>
+</div>
+</div>
+</div>
 
   </div>
   <hr>
@@ -772,7 +791,7 @@ specifying IP and port <code class="verbatim">8022</code> and without a username
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

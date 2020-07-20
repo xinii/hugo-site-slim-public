@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>Windows 10をクリーンインストールした後の作業 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/some-installations-for-windows-10" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Windows 10をクリーンインストールした後の作業">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="Windows 10をクリーンインストールした後の作業">
 <meta itemprop="description" content="この記事はWindows 10をクリーンインストールした後のいくつかの作業を紹介する。Windowsの使用には必須ではないけど，僕にとってはより効率的な仕事のために必ず入れておくのでエンジニアにはお勧め。">
 <meta itemprop="datePublished" content="2020-06-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-04T00:00:00&#43;00:00" />
@@ -287,40 +288,43 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Windows 10のアクティベーション
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
-<code>cmd</code> を開く
-</p>
+<code>cmd</code> を開く</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">slmgr -ipk {your product key}
 slmgr -skms {kms server address of your company}
 slmgr -ato</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-いくつか便利のツールをインストールする" class="outline-2">
 <h2 id="いくつか便利のツールをインストールする">
 いくつか便利のツールをインストールする
 </h2>
+<div id="outline-text-いくつか便利のツールをインストールする" class="outline-text-2">
 <ul>
 <li>
-<p>
-<a href="https://www.msys2.org/">Msys2</a>
-</p>
+<p><a href="https://www.msys2.org/">Msys2</a></p>
 </li>
 <li>
-<p>
-<a href="https://www.autohotkey.com/">AutoHotKey</a>
-</p>
+<p><a href="https://www.autohotkey.com/">AutoHotKey</a></p>
 </li>
 <li>
-<p>
-<a href="https://github.com/edihbrandon/RictyDiminished">Ricty</a>
-</p>
+<p><a href="https://github.com/edihbrandon/RictyDiminished">Ricty</a></p>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-msys2を設定する" class="outline-2">
 <h2 id="msys2を設定する">
 msys2を設定する
 </h2>
+<div id="outline-text-msys2を設定する" class="outline-text-2">
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman -S git fish tmux emacs gcc python
 cd ~
@@ -341,6 +345,8 @@ cat <span style="color:#f92672">{</span>path to your pub key<span style="color:#
 chmod <span style="color:#ae81ff">600</span> ~/.ssh/authorized_keys
 chmod <span style="color:#ae81ff">700</span> ~/.ssh
 /usr/bin/sshd</code></pre></div>
+</div>
+</div>
 </div>
 
   </div>
@@ -777,7 +783,7 @@ chmod <span style="color:#ae81ff">700</span> ~/.ssh
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

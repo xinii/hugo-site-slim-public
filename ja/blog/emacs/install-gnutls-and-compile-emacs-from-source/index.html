@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>GnutlsをインストールしてソースからEmacsをコンパイル - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/install-gnutls-and-compile-emacs-from-source" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="GnutlsをインストールしてソースからEmacsをコンパイル">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="GnutlsをインストールしてソースからEmacsをコンパイル">
 <meta itemprop="description" content="ソースからEmacsをコンパイルする時にGnutlsに関するエラーが出た？一体どういうことかを見てみよう！">
 <meta itemprop="datePublished" content="2019-05-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-04T00:00:00&#43;00:00" />
@@ -289,59 +290,64 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 今の環境にGnutlsがない場合
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
-今の環境にGnutlsがない場合は，ソースからEmacs<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>をコンパイルする時に以下の設定が必要。
-</p>
+今の環境にGnutlsがない場合は，ソースからEmacs<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>をコンパイルする時に以下の設定が必要。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  ./configure --with-gnutls<span style="color:#f92672">=</span>no</code></pre></div>
 </div>
 <p>
-他にも依存されるライブラリーなどが足りない場合は，例えば以下のように設定をする。
-</p>
+他にも依存されるライブラリーなどが足りない場合は，例えば以下のように設定をする。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  bash configure --prefix<span style="color:#f92672">=</span>$HOME/.local --with-gif<span style="color:#f92672">=</span>no --with-gnutls<span style="color:#f92672">=</span>no</code></pre></div>
 </div>
 <p>
-これでデフォルトのパスとかへの権限や，ライブラリーが足りない場合でもソースからインストール出来てしまう。
-</p>
+これでデフォルトのパスとかへの権限や，ライブラリーが足りない場合でもソースからインストール出来てしまう。</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 潜在的なリスク
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <p>
 以上のようにEmacsを <code class="verbatim">$HOME/.local</code> へのインストールが出来てしまうけど，
-Gnutlsがサポートされないゆえに，Emacsでインターネットが必要となった時にhttpsが使えない。
-</p>
+Gnutlsがサポートされないゆえに，Emacsでインターネットが必要となった時にhttpsが使えない。</p>
 <p>
 Emacsが初期化される時だけなら，設定ファイルの中のMelpaリンクを全てhttpに変更すれば済ませるが，
-セキュリティ上にあまりお勧めができないし，今後Emacsの拡張機能を使う時のリスクにもなる。
-</p>
+セキュリティ上にあまりお勧めができないし，今後Emacsの拡張機能を使う時のリスクにもなる。</p>
 <p>
 例えば， <code class="verbatim">google-translate</code> のEmacs拡張パッケージを使う場合は，
 Emacsのelpaフォルダーにある <code class="verbatim">google-translate</code> の中の全ての <code class="verbatim">*.el</code> にある <code class="verbatim">https</code> を <code class="verbatim">http</code> に書き換えても，
-実際に使う時に一部の機能にとっては <code class="verbatim">https</code> が必須で翻訳が正常に機能しない恐れがある。
-</p>
+実際に使う時に一部の機能にとっては <code class="verbatim">https</code> が必須で翻訳が正常に機能しない恐れがある。</p>
 <p>
-ここでは， <code class="verbatim">*.el</code> を変更した後に， <code class="verbatim">*.elc</code> を削除しないと変更が反映されない可能性がある。
-</p>
+ここでは， <code class="verbatim">*.el</code> を変更した後に， <code class="verbatim">*.elc</code> を削除しないと変更が反映されない可能性がある。</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 Gnutlsをインストール
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <p>
 以上の問題を解決するもっとも簡単な方法としては，
-今の環境にGnutlsをインストールしてからソースからもう一度Emacsをインストールすること。
-</p>
+今の環境にGnutlsをインストールしてからソースからもう一度Emacsをインストールすること。</p>
 <p>
-OpenSUSEを例として，以下のコマンドでGnutlsをインストールする。
-</p>
+OpenSUSEを例として，以下のコマンドでGnutlsをインストールする。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  sudo zypper install gnutls</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 その他の問題
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  checking <span style="color:#66d9ef">for</span> library containing tputs... no
   configure: error: The required <span style="color:#66d9ef">function</span> <span style="color:#e6db74">&#39;tputs&#39;</span> was not found in any library.
@@ -356,10 +362,11 @@ OpenSUSEを例として，以下のコマンドでGnutlsをインストールす
 <p>
 もしすでにGnutlsがインストール済みで， <code class="verbatim">make</code> を叩くと以上のエラーが出てきてしまったら，
 OpenSUSE環境の場合は， <code class="verbatim">ncurses-devel</code> というパッケージが必要だということなので，
-以下のコマンドで入れておこう。
-</p>
+以下のコマンドで入れておこう。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  sudo zypper install ncurses-devel</code></pre></div>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
@@ -367,9 +374,7 @@ OpenSUSE環境の場合は， <code class="verbatim">ncurses-devel</code> とい
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://ja.wikipedia.org/wiki/Emacs">The logo of Emacs</a>
-</p>
+<p><a href="https://ja.wikipedia.org/wiki/Emacs">The logo of Emacs</a></p>
 </div>
 </div>
 </div>
@@ -805,7 +810,7 @@ OpenSUSE環境の場合は， <code class="verbatim">ncurses-devel</code> とい
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

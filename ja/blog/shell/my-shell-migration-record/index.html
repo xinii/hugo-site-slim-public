@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>僕のシェル移行記録 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/my-shell-migration-record" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="僕のシェル移行記録">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="僕のシェル移行記録">
 <meta itemprop="description" content="bash -&gt; zsh -&gt; fish">
 <meta itemprop="datePublished" content="2019-05-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-03T00:00:00&#43;00:00" />
@@ -297,19 +298,18 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 bashからzshに
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 虽然我使用zsh shell两周后就换到fish shell了（关于fish
 shell下面有专门介绍）， 但这并不否认zsh shell仍然是个很好的shell。
-你可以通过下面的方式从任意的shell切换至zsh shell。
-</p>
+你可以通过下面的方式从任意的shell切换至zsh shell。</p>
 <ul>
 <li>
-<p>
-安装zsh时通过下面的指令：
-</p>
+<p>安装zsh时通过下面的指令：</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -318,9 +318,7 @@ shell下面有专门介绍）， 但这并不否认zsh shell仍然是个很好�
 </div>
 <ul>
 <li>
-<p>
-如果你想要知道现在系统裡已经安装好的shell，输入下面的指令：
-</p>
+<p>如果你想要知道现在系统裡已经安装好的shell，输入下面的指令：</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -328,9 +326,7 @@ shell下面有专门介绍）， 但这并不否认zsh shell仍然是个很好�
 </div>
 <ul>
 <li>
-<p>
-如何将zsh作为你默认的shell呢？，输入下面的指令：
-</p>
+<p>如何将zsh作为你默认的shell呢？，输入下面的指令：</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -338,34 +334,24 @@ shell下面有专门介绍）， 但这并不否认zsh shell仍然是个很好�
 </div>
 <ul>
 <li>
-<p>
-关于配置文件的读取错误
-</p>
+<p>关于配置文件的读取错误</p>
 </li>
 </ul>
-<p>
-shell脚本解释出错时可以查看一下当前所使用的=sh=路径，
-比如有可能是=sh=指向了=dash=导致出错。 通过下面的语句查看。
-</p>
+<p>shell脚本解释出错时可以查看一下当前所使用的=sh=路径，
+比如有可能是=sh=指向了=dash=导致出错。 通过下面的语句查看。</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  ls -l <span style="color:#e6db74">`</span>which sh<span style="color:#e6db74">`</span></code></pre></div>
 </div>
 <ul>
 <li>
-<p>
-脚本解释器在语法上的不同点
-</p>
+<p>脚本解释器在语法上的不同点</p>
 </li>
 </ul>
-<p>
-从传统的bash等shell换到zsh时会发现集合的第一个元素的索引是从1开始的，
-如果希望从0开始，在配置文件中配置下面语句即可。
-</p>
+<p>从传统的bash等shell换到zsh时会发现集合的第一个元素的索引是从1开始的，
+如果希望从0开始，在配置文件中配置下面语句即可。</p>
 <ul>
 <li>
-<p>
-Fix array index for zsh:
-</p>
+<p>Fix array index for zsh:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -373,34 +359,39 @@ Fix array index for zsh:
       setopt localoptions ksharrays
   <span style="color:#66d9ef">fi</span></code></pre></div>
 </div>
+<div id="outline-container-配置zsh-shell" class="outline-3">
 <h3 id="配置zsh-shell">
 配置zsh shell
 </h3>
+<div id="outline-text-配置zsh-shell" class="outline-text-3">
 <p>
 与bash shell的=.bashrc=类似，=zsh=的配置也需要一个配置文件，
 这个文件是在用户目录下的=.zshrc=文件，点击
 <a href="https://github.com/xinii/xinconfig/blob/master/profile/core/zsh.sh">这里</a>
-打开我上传到=Github=的配置文件下载使用。
-</p>
+打开我上传到=Github=的配置文件下载使用。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-从zsh到fish" class="outline-2">
 <h2 id="从zsh到fish">
 zshからfishに
 </h2>
+<div id="outline-text-从zsh到fish" class="outline-text-2">
 <p>
 使用zsh shell之后大概两週我就换到fish shell了，
 这不是因为zsh不好，而是fish天然的完成度和易用性吸引了我，
-转移到fish环境后，有关shell折腾算是告一段落，以下对该过程纪录。
-</p>
+转移到fish环境后，有关shell折腾算是告一段落，以下对该过程纪录。</p>
+<div id="outline-container-fish-shell的安装以及默认shell的切换" class="outline-3">
 <h3 id="fish-shell的安装以及默认shell的切换">
 fish shell的安装以及默认shell的切换
 </h3>
+<div id="outline-text-fish-shell的安装以及默认shell的切换" class="outline-text-3">
 <p>
-这个上面提到过，这裡具体针对不同的操作系统所需要执行的指令进行介绍。
-</p>
+这个上面提到过，这裡具体针对不同的操作系统所需要执行的指令进行介绍。</p>
 <ul>
 <li>
-<p>
-MacOS:
-</p>
+<p>MacOS:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -408,9 +399,7 @@ MacOS:
 </div>
 <ul>
 <li>
-<p>
-Ubuntu/Linux Mint:
-</p>
+<p>Ubuntu/Linux Mint:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -418,9 +407,7 @@ Ubuntu/Linux Mint:
 </div>
 <ul>
 <li>
-<p>
-OpenSUSE:
-</p>
+<p>OpenSUSE:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -429,15 +416,13 @@ OpenSUSE:
 <p>
 如果需要=root=权限，例如你是运行在Windows下的OpenSUSE环境，
 则默认需要=root=权限，则前面加=sudo=。
-通过下面的语句查看当前系统所使用的shell：
-</p>
+通过下面的语句查看当前系统所使用的shell：</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  cat /etc/shells</code></pre></div>
 </div>
 <p>
 如果显示你的fish shell在=/usr/bin/fish=，
-那麽执行下面的语句切换其为默认shell（权限不足则补充=sudo=）：
-</p>
+那麽执行下面的语句切换其为默认shell（权限不足则补充=sudo=）：</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  chsh -s /usr/bin/fish</code></pre></div>
 </div>
@@ -446,46 +431,44 @@ OpenSUSE:
 shell后马上报很多关于hostname的错，
 也就是说当前环境缺少一个叫做hostname的包，
 那麽使用你所使用的发行版的包管理器安装=hostname=，
-例如在OpenSUSE下使用：
-</p>
+例如在OpenSUSE下使用：</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  sudo zypper install hostname</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-fish的配置" class="outline-3">
 <h3 id="fish的配置">
 fish的配置
 </h3>
+<div id="outline-text-fish的配置" class="outline-text-3">
 <p>
 我写好的配置上传在了Github，点击
 <a href="https://github.com/xinii/xinconfig/tree/master/profile/fish">这里</a>
-查看我的配置。
-</p>
+查看我的配置。</p>
+</div>
+</div>
+<div id="outline-container-在fish-shell下使用python时的常见问题" class="outline-3">
 <h3 id="在fish-shell下使用python时的常见问题">
 在fish shell下使用python时的常见问题
 </h3>
+<div id="outline-text-在fish-shell下使用python时的常见问题" class="outline-text-3">
 <p>
-目前我遇到的比较需要注意的问题有下面两点：
-</p>
+目前我遇到的比较需要注意的问题有下面两点：</p>
 <ul>
 <li>
-<p>
-关于tmux
-</p>
+<p>关于tmux</p>
 </li>
 </ul>
-<p>
-tmux在后台存在session的时候， 即使更新=PYTHONPATH=环境变量也不会生效，
+<p>tmux在后台存在session的时候， 即使更新=PYTHONPATH=环境变量也不会生效，
 此时需要关闭tmux的所有进程，更新才会生效。
-除fish以外其他shell环境应该也会遇到， 我是在fish首次出现，留作纪录。
-</p>
+除fish以外其他shell环境应该也会遇到， 我是在fish首次出现，留作纪录。</p>
 <ul>
 <li>
-<p>
-关于PYTHONPATH
-</p>
+<p>关于PYTHONPATH</p>
 </li>
 </ul>
-<p>
-fish
+<p>fish
 shell中定义环境变量的方式为 <code class="verbatim">set &lt;variable_name&gt; &lt;parameter_1&gt; &lt;parameter_2&gt;</code>
 这种方式有很大的优越性而且非常方便， 然而对于=PYTHONPATH=，
 则=set PYTHONPATH &lt;parameter_1&gt;:&lt;parameter_2&gt;=的方式更具有通用性。
@@ -493,8 +476,11 @@ shell中定义环境变量的方式为 <code class="verbatim">set &lt;variable_n
 Nano上的Ubuntu下测试时，只有第二种方式可用。
 具体原因尚未明确，有可能时操作系统不同的原因，
 也可能是python版本不同造成的
-（比如版本号相同，但处理器架构不同造成了编译方式的差异导致该问题）。
-</p>
+（比如版本号相同，但处理器架构不同造成了编译方式的差异导致该问题）。</p>
+</div>
+</div>
+</div>
+</div>
 
   </div>
   <hr>
@@ -930,7 +916,7 @@ Nano上的Ubuntu下测试时，只有第二种方式可用。
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

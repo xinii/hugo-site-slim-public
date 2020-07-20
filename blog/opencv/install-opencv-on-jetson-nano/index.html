@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>How to install OpenCV on Jetson Nano? - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/en/post/install-opencv-on-jetson-nano" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="How to install OpenCV on Jetson Nano?">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="How to install OpenCV on Jetson Nano?">
 <meta itemprop="description" content="You may need to do some work when installing OpenCV on Jetson Nano, let&#39;s look at it together.">
 <meta itemprop="datePublished" content="2019-07-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-12T00:00:00&#43;00:00" />
@@ -289,16 +290,17 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Generate swap file
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 To prevent errors due to insufficient memory during compilation, create
 a swap file firstly, and store it to somewhere you know. After OS
 restarting, the swap space will disappear, or you can manually delete
 this file after the completion of the following compilation and other
-work.
-</p>
+work.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  $ fallocate -l 4G swapfile
   $ chmod <span style="color:#ae81ff">600</span> swapfile
@@ -306,17 +308,19 @@ work.
   $ sudo swapon swapfile
   $ swapon -s</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 Generate installation script
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <p>
-<a href="https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh">The original link of the script to install the OpenCV 4.0.0 version</a>
-</p>
+<a href="https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh">The original link of the script to install the OpenCV 4.0.0 version</a></p>
 <p>
 The above is the version used to install OpenCV 4.0.0, here we want to
 install the newer version 4.1.0, so change the version number part of
-the above code.
-</p>
+the above code.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  <span style="color:#75715e">#!/bin/bash</span>
   #
@@ -369,11 +373,14 @@ the above code.
 </div>
 <p>
 Save the above script as a <code class="verbatim">sh</code> file, for example,
-<code class="verbatim">install_opencv4.1.0_Nano.sh</code>.
-</p>
+<code class="verbatim">install_opencv4.1.0_Nano.sh</code>.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 Run the script
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  mkdir opencv
   sh install_opencv4.1.0_Nano.sh opencv</code></pre></div>
@@ -381,38 +388,36 @@ Run the script
 <p>
 The installation may take a lot of time, please be patient and wait for
 the installation to end. It is recommended to use tmux to hang in the
-background.
-</p>
+background.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 Test the installed OpenCV
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
 <p>
 Test the statement <code class="verbatim">import cv2</code> through the interactive interface of
-python, it is good if no error is reported.
-</p>
+python, it is good if no error is reported.</p>
 <p>
 However, considering that users who use tools such as pyenv for python
 version management, if they switch to the python version installed under
 pyenv, the installed OpenCV may not be recognized. The solution is to
 create a soft link to the OpenCV library and link it to the python
-library directory under the management of pyenv.
-</p>
+library directory under the management of pyenv.</p>
 <p>
 For example, suppose the library directory of the python version in
-pyenv is,
-</p>
+pyenv is,</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  /home/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/.anyenv/envs/pyenv/versions/3.6.8/lib/python3.6/site-packages</code></pre></div>
 </div>
 <p>
-And the installed OpenCV library path is,
-</p>
+And the installed OpenCV library path is,</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  /usr/local/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so</code></pre></div>
 </div>
 <p>
-Then execute the following statement to create a soft link,
-</p>
+Then execute the following statement to create a soft link,</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  cd /home/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/.anyenv/envs/pyenv/versions/3.6.8/lib/python3.6/site-packages
   ln -s /usr/local/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ./</code></pre></div>
@@ -421,8 +426,9 @@ Then execute the following statement to create a soft link,
 Besides, use the python version of pip in pyenv to install numpy through
 the <code class="verbatim">pip install numpy</code> statement, and go to the interactive interface
 to test <code class="verbatim">import cv2</code>. If no error is displayed, the installation is
-complete.
-</p>
+complete.</p>
+</div>
+</div>
 
   </div>
   <hr>
@@ -784,7 +790,7 @@ complete.
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

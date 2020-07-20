@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>Jetson NanoにOpenCVをインストール - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/install-opencv-on-jetson-nano" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Jetson NanoにOpenCVをインストール">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="Jetson NanoにOpenCVをインストール">
 <meta itemprop="description" content="Jetson NanoにOpenCVをインストールする際に少し工夫する必要があるかもしれない，一緒に見てみよう！">
 <meta itemprop="datePublished" content="2019-07-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-12T00:00:00&#43;00:00" />
@@ -289,15 +290,16 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 swapファイルを生成
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 コンパイル途中にメモリー不足などの問題を防ぐため，
 swapという交換用ファイルを任意のパスに生成しておく。
 このファイルは，OS再起動の後に自動的に消えるが，
-全てのインストールが終わったら，手作業で交換用ファイルを削除しても良い。
-</p>
+全てのインストールが終わったら，手作業で交換用ファイルを削除しても良い。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  $ fallocate -l 4G swapfile
   $ chmod <span style="color:#ae81ff">600</span> swapfile
@@ -305,16 +307,18 @@ swapという交換用ファイルを任意のパスに生成しておく。
   $ sudo swapon swapfile
   $ swapon -s</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 インストールのスクリプトを生成
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <p>
-<a href="https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh">OpenCV 4.0.0をインストールためのリンク</a>
-</p>
+<a href="https://github.com/AastaNV/JEP/blob/master/script/install_opencv4.0.0_Nano.sh">OpenCV 4.0.0をインストールためのリンク</a></p>
 <p>
 以上は，OpenCV 4.0.0をインストールためのリンクで，ここでは，OpenCV
-4.1.0をインストールしたいため， バージョン番号の部分に少し手を加える。
-</p>
+4.1.0をインストールしたいため， バージョン番号の部分に少し手を加える。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  <span style="color:#75715e">#!/bin/bash</span>
   #
@@ -366,45 +370,46 @@ swapという交換用ファイルを任意のパスに生成しておく。
   echo <span style="color:#e6db74">&#34;** Bye :)&#34;</span></code></pre></div>
 </div>
 <p>
-以上のスクリプトを=sh=ファイルとして保存する。例えば=install_opencv4.1.0_Nano.sh=。
-</p>
+以上のスクリプトを=sh=ファイルとして保存する。例えば=install_opencv4.1.0_Nano.sh=。</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 スクリプトを実行する
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  mkdir opencv
   sh install_opencv4.1.0_Nano.sh opencv</code></pre></div>
 </div>
 <p>
 インストールのプロセスが割と時間かかるため，インストールが終わるまで待つ。
-ここで，tmuxとかに任せてバックグラウンドでやれば，なんかあった時にattachすれば済むのでおすすめ。
-</p>
+ここで，tmuxとかに任せてバックグラウンドでやれば，なんかあった時にattachすれば済むのでおすすめ。</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 インストールされたOpenCVをテスト
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
 <p>
-コマンドラインに=python=を叩くと=import cv2=をためしたらエラーがなければ終わり。
-</p>
+コマンドラインに=python=を叩くと=import cv2=をためしたらエラーがなければ終わり。</p>
 <p>
 ただ，pyenvなどのpython環境管理ツールを使っている方なら，
 pyenvを使って入れたpythonにおいてはOpenCVを読み込めない場合がある。
-解決案としては，OpenCVのライブラーのソフトリンクをpyenvのpythonの下に置くこと。
-</p>
+解決案としては，OpenCVのライブラーのソフトリンクをpyenvのpythonの下に置くこと。</p>
 <p>
-例えば，以下のようなpyenvのpythonのライブラリーのパスがある。
-</p>
+例えば，以下のようなpyenvのpythonのライブラリーのパスがある。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  /home/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/.anyenv/envs/pyenv/versions/3.6.8/lib/python3.6/site-packages</code></pre></div>
 </div>
 <p>
-また，インストールされたOpenCVのライブラリーのパスが以下となる。
-</p>
+また，インストールされたOpenCVのライブラリーのパスが以下となる。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  /usr/local/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so</code></pre></div>
 </div>
 <p>
-この場合は，以下のコマンドでソフトリンクを作れる。
-</p>
+この場合は，以下のコマンドでソフトリンクを作れる。</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  cd /home/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/.anyenv/envs/pyenv/versions/3.6.8/lib/python3.6/site-packages
   ln -s /usr/local/lib/python3.6/dist-packages/cv2/python-3.6/cv2.cpython-36m-aarch64-linux-gnu.so ./</code></pre></div>
@@ -412,8 +417,9 @@ pyenvを使って入れたpythonにおいてはOpenCVを読み込めない場合
 <p>
 また，事前にpyenvのpythonのpipを使って，
 =pip install numpy=でnumpyを入れておくと
-さっきのように=import cv2=でテストしてエラーがなければおしまい。
-</p>
+さっきのように=import cv2=でテストしてエラーがなければおしまい。</p>
+</div>
+</div>
 
   </div>
   <hr>
@@ -845,7 +851,7 @@ pyenvを使って入れたpythonにおいてはOpenCVを読み込めない場合
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

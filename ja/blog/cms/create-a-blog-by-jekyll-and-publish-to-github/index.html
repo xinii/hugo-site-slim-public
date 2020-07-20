@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>Jekyllで作成したブログをGithubに公開 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/create-a-blog-by-jekyll-and-publish-to-github" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Jekyllで作成したブログをGithubに公開">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="Jekyllで作成したブログをGithubに公開">
 <meta itemprop="description" content="自分のブログがほしいけどやり方はわからない？GithubがデフォルトでビルドとかをサポートしているJekyllを試してみよう！">
 <meta itemprop="datePublished" content="2019-04-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-04-02T00:00:00&#43;00:00" />
@@ -285,28 +286,26 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 Jekyll<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>をインストール
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 JekyllがRubyで書いた静的なサイトジェネレーター。
-以下は公式サイトの紹介文。
-</p>
+以下は公式サイトの紹介文。</p>
 <blockquote>
-<p>
-Jekyll is a static site generator. You give it text written in your
+<p>Jekyll is a static site generator. You give it text written in your
   favorite markup language and it uses layouts to create a static
   website. You can tweak how you want the site URLs to look, what data
-  gets displayed on the site, and more. –Jekyll<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
-</p>
+  gets displayed on the site, and more. –Jekyll<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup></p>
 </blockquote>
 <p>
 Jekyllをインストールする際に，
 まずはRubyのパッケージ管理ツールを入れておくとあとは便利。
 よく使われているRubyのパッケージ管理ツールが <code>gem</code> で，
 Ubuntuなどのシステムにおいて，
-以下のコマンドで <code>gem</code> が同時にインストールされる。
-</p>
+以下のコマンドで <code>gem</code> が同時にインストールされる。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  apt install ruby-dev</code></pre></div>
 </div>
@@ -315,73 +314,63 @@ Ubuntuなどのシステムにおいて，
  <code>gem</code> を使っていろんなRubyのパッケージを入れることが可能になる。
 もし <code>rbenv</code> などのバーチャル環境管理ツールを使っていれば，
 実行可能な <code>gem</code> があればあとは同じ。
-以下のコマンドでJekyllを入れる。簡単だね。
-</p>
+以下のコマンドでJekyllを入れる。簡単だね。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  gem install jekyll</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-githubに公開" class="outline-2">
 <h2 id="githubに公開">
 Githubに公開
 </h2>
+<div id="outline-text-githubに公開" class="outline-text-2">
 <p>
 Jekyllをインストールしたら，
 とりあえずJekyllで作った何かしらをGithubに公開して見てみたいだね。
-気持ちがわかる。
-</p>
+気持ちがわかる。</p>
 <p>
 そうしたら，記事などを色々書き始める前に，空のブログを一旦Githubに公開しよう！
-まずローカルでブログを管理したい場所に以下のコマンドを叩く。
-</p>
+まずローカルでブログを管理したい場所に以下のコマンドを叩く。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  jekyll new folder-name-for-your-blog</code></pre></div>
 </div>
 <p>
-そうすると，カレントフォルダーに <code>folder-name-for-your-blog</code> という名前のサブフォルダーが出来てしまう。
-</p>
+そうすると，カレントフォルダーに <code>folder-name-for-your-blog</code> という名前のサブフォルダーが出来てしまう。</p>
 <p>
 そして，Githubのリポジトリのページにおいて，
-<code>your-user-name-of-github.github.io</code> という名前のリポジトリを作っておく。
-</p>
+<code>your-user-name-of-github.github.io</code> という名前のリポジトリを作っておく。</p>
 <p>
 新しいリポを作ったら， <code>git</code> でどう <code>push</code> するかとかのヒントが出てくると思うので，
-それに従ってさっき作った <code>folder-name-for-your-blog</code> フォルダーの内容を <code>your-user-name-of-github.github.io</code> に <code>push</code> すればおしまい。
-</p>
+それに従ってさっき作った <code>folder-name-for-your-blog</code> フォルダーの内容を <code>your-user-name-of-github.github.io</code> に <code>push</code> すればおしまい。</p>
 <p>
 数分後に，ブラウザを使って <code>your-user-name-of-github.github.io</code> にアクセスしてみれば，
-何かしらのJekyllページが出てくるはず。
-</p>
+何かしらのJekyllページが出てくるはず。</p>
 <p>
-<del>このブログでも以上の方法で作っている。</del>
-</p>
+<del>このブログでも以上の方法で作っている。</del></p>
 <p>
-（2020年6月14日追記）
-</p>
+（2020年6月14日追記）</p>
 <p>
-<a href="https://xinii.github.io">このブログ</a>は現在 <code>hugo</code> という静的なサイトジェネレーターで作っている。
-</p>
+<a href="https://xinii.github.io">このブログ</a>は現在 <code>hugo</code> という静的なサイトジェネレーターで作っている。</p>
 <p>
-古いブログを参考していただく場合は，<a href="https://xinii.github.io/jekyll-blog">ここ</a>をクリックしてください。
-</p>
+古いブログを参考していただく場合は，<a href="https://xinii.github.io/jekyll-blog">ここ</a>をクリックしてください。</p>
 <p>
-それでは。
-</p>
+それでは。</p>
+</div>
+</div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-red-transparent.png">JekyllのLogo</a>
-</p>
+<p><a href="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-black-red-transparent.png">JekyllのLogo</a></p>
 </div>
 </div>
 <div class="footnote-definition">
 <sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://jekyllrb.com/docs/">jekyllrb.com</a>
-</p>
+<p><a href="https://jekyllrb.com/docs/">jekyllrb.com</a></p>
 </div>
 </div>
 </div>
@@ -817,7 +806,7 @@ Jekyllをインストールしたら，
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

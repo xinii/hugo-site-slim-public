@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>一些可帮助你更有效地工作的 Windows 注册表设置 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/zh-cn/post/several-windows-registry-configurations" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="一些可帮助你更有效地工作的 Windows 注册表设置">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="一些可帮助你更有效地工作的 Windows 注册表设置">
 <meta itemprop="description" content="希望实现一些仅通过 Windows 的系统设置无法实现的功能，但也不希望使用第三方软件？来试试修改注册表吧！">
 <meta itemprop="datePublished" content="2020-06-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-04T00:00:00&#43;00:00" />
@@ -305,24 +306,29 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 有关日语键盘布局的注册表设置
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
 关于键盘扫描码
 </h3>
+<div id="outline-text-headline-2" class="outline-text-3">
 <p>
-首先，键盘扫描码是什么呢？让我们看看维基百科上的定义。
-</p>
+首先，键盘扫描码是什么呢？让我们看看维基百科上的定义。</p>
 <blockquote>
-<p>
-键盘扫描码（英語：scancode 或 scan code）是绝大多数电脑键盘向计算机发送的一项数据，
-用以报告哪些键被按下。它使用一个数字或数字序列来表示分配到键盘上的每个按键。 - <a href="https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E6%89%AB%E6%8F%8F%E7%A0%81">Wikipedia</a>
-</p>
+<p>键盘扫描码（英語：scancode 或 scan code）是绝大多数电脑键盘向计算机发送的一项数据，
+用以报告哪些键被按下。它使用一个数字或数字序列来表示分配到键盘上的每个按键。 - <a href="https://zh.wikipedia.org/wiki/%E9%94%AE%E7%9B%98%E6%89%AB%E6%8F%8F%E7%A0%81">Wikipedia</a></p>
 </blockquote>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
 <h3 id="headline-3">
 键盘扫描码的例子<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
 </h3>
+<div id="outline-text-headline-3" class="outline-text-3">
 <table>
 <thead>
 <tr>
@@ -373,32 +379,30 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
 <h3 id="headline-4">
 在注册表中进行键盘扫描码映射
 </h3>
+<div id="outline-text-headline-4" class="outline-text-3">
 <ul>
 <li>
-<p>
-首先，按 Windows 徽标键 + <code class="verbatim">R</code> ，输入 <code class="verbatim">regedit</code> 后然后按 <code class="verbatim">Enter</code> 键打开
-Windows 注册表编辑器。 然后在注册表编辑器中打开以下位置。
-</p>
+<p>首先，按 Windows 徽标键 + <code class="verbatim">R</code> ，输入 <code class="verbatim">regedit</code> 后然后按 <code class="verbatim">Enter</code> 键打开
+Windows 注册表编辑器。 然后在注册表编辑器中打开以下位置。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-接下来，右击空白处，按照「新建 - 二进制值(B) - Scancode
+<p>接下来，右击空白处，按照「新建 - 二进制值(B) - Scancode
 Map」的顺序创建一个叫做「Scancode Map」的二进制 Key，双击即可编辑。
 关于「Scancode Map」的值（也就是映射的规则），以我的设定为例下面列出表格供参考。
 这里，「版本」，「标记」和「终端空值」的部分需保留原样。
-另外，关于「映射数」的部分，需要设定为映射规则的数量和「终端空值」的数量之和。
-</p>
+另外，关于「映射数」的部分，需要设定为映射规则的数量和「终端空值」的数量之和。</p>
 </li>
 <li>
-<p>
-我所使用的 Logicool K380 键盘（日语布局）映射关系
-</p>
+<p>我所使用的 Logicool K380 键盘（日语布局）映射关系</p>
 <table>
 <thead>
 <tr>
@@ -456,9 +460,7 @@ Map」的顺序创建一个叫做「Scancode Map」的二进制 Key，双击即�
 </table>
 </li>
 <li>
-<p>
-我所使用的 FILCO Majestouch MINILA Air 键盘（日语布局）的映射关系
-</p>
+<p>我所使用的 FILCO Majestouch MINILA Air 键盘（日语布局）的映射关系</p>
 <table>
 <thead>
 <tr>
@@ -523,38 +525,38 @@ Map」的顺序创建一个叫做「Scancode Map」的二进制 Key，双击即�
 </table>
 </li>
 <li>
-<p>
-在这里需要注意，「Pause/Break」键并非单一扫描码构成，
+<p>在这里需要注意，「Pause/Break」键并非单一扫描码构成，
 「NumLock」的扫描码也在其中，在设定时需根据情况灵活设定。
-可以参考下面的描述。
-</p>
+可以参考下面的描述。</p>
 <blockquote>
-<p>
-Pause <code>0xE1:0x1D:0x45</code> [ 84key <code>Ctrl</code> (0x1D) + <code>NumLock</code> (0x45)], no auto repeat,
-break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d/Keyboard%20Scancode%20Map">Keyboard Scancode Map</a>
-</p>
+<p>Pause <code>0xE1:0x1D:0x45</code> [ 84key <code>Ctrl</code> (0x1D) + <code>NumLock</code> (0x45)], no auto repeat,
+break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d/Keyboard%20Scancode%20Map">Keyboard Scancode Map</a></p>
 </blockquote>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
 <h2 id="headline-5">
 更改键盘布局类型
 </h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 中文输入法的英文布局改为日语键盘布局
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <ul>
 <li>
-<p>
-首先，打开注册表的下面位置。
-</p>
+<p>首先，打开注册表的下面位置。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts\00000804</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-然后做以下调整。
-</p>
+<p>然后做以下调整。</p>
 <table>
 <thead>
 <tr>
@@ -573,47 +575,53 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
 </table>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
 <h3 id="headline-7">
 其他语言的输入法的键盘布局更改
 </h3>
+<div id="outline-text-headline-7" class="outline-text-3">
 <ul>
 <li>
-<p>
-其他的语言的情况下，只需变更注册表路径的 <code class="verbatim">00000804</code>
+<p>其他的语言的情况下，只需变更注册表路径的 <code class="verbatim">00000804</code>
 的地方到对应的语言的输入法， 然后改变 <code class="verbatim">***.DLL</code>
-的部分到对应语言的动态链接库文件的名称即可。
-</p>
+的部分到对应语言的动态链接库文件的名称即可。</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
 <h2 id="headline-8">
 当资源管理器的「我的电脑」或「PC」中出现未知图标时的注册表设置
 </h2>
+<div id="outline-text-headline-8" class="outline-text-2">
 <ul>
 <li>
-<p>
-通过定位到下面的注册表路径，找到位置图标对应的项删除即可。
-</p>
+<p>通过定位到下面的注册表路径，找到位置图标对应的项删除即可。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</code></pre></div>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
 <h2 id="headline-9">
 无法连接到本地网络上的 NAS 时的注册表设置<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
 </h2>
+<div id="outline-text-headline-9" class="outline-text-2">
 <ul>
 <li>
-<p>
-首先打开以下注册表位置
-</p>
+<p>首先打开以下注册表位置</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-然后进行下面的变更
-</p>
+<p>然后进行下面的变更</p>
 <table>
 <thead>
 <tr>
@@ -632,43 +640,39 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
 </table>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
 <h2 id="headline-10">
 参考资料
 </h2>
+<div id="outline-text-headline-10" class="outline-text-2">
 <ul>
 <li>
-<p>
-<a href="https://usedoor.jp/howto/digital/pc/windows-uwagaki-keyboard-insert-key-mukouka/">将 Insert 无效化的方法（原文为日语）</a>
-</p>
+<p><a href="https://usedoor.jp/howto/digital/pc/windows-uwagaki-keyboard-insert-key-mukouka/">将 Insert 无效化的方法（原文为日语）</a></p>
 </li>
 <li>
-<p>
-<a href="https://tepp91.github.io/contents/misc/remap-keyboard-with-scancode-map.html">通过 Scancode Map 改变键的分配（原文为日语）</a>
-</p>
+<p><a href="https://tepp91.github.io/contents/misc/remap-keyboard-with-scancode-map.html">通过 Scancode Map 改变键的分配（原文为日语）</a></p>
 </li>
 <li>
-<p>
-<a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-files/homegroup-removed-how-to-get-network-sharing-work/01277332-2916-4a68-853a-116696b20743">Homegroup removed! How to get network sharing work with Windows 10 v1803</a>
-</p>
+<p><a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-files/homegroup-removed-how-to-get-network-sharing-work/01277332-2916-4a68-853a-116696b20743">Homegroup removed! How to get network sharing work with Windows 10 v1803</a></p>
 </li>
 </ul>
+</div>
+</div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="http://softwaretechnique.jp/OS_Development/Tips/scan_code_set1.html">键盘扫描码一览表（原文为日语）</a>
-</p>
+<p><a href="http://softwaretechnique.jp/OS_Development/Tips/scan_code_set1.html">键盘扫描码一览表（原文为日语）</a></p>
 </div>
 </div>
 <div class="footnote-definition">
 <sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://www.nedia.ne.jp/blog/2019/04/02/13919">无法连接 NAS！原来原因并不是 SMB1.0！（原文为日语）</a>
-</p>
+<p><a href="https://www.nedia.ne.jp/blog/2019/04/02/13919">无法连接 NAS！原来原因并不是 SMB1.0！（原文为日语）</a></p>
 </div>
 </div>
 </div>
@@ -1034,7 +1038,7 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
         xin iDEA iNNATA
       
     . <br>
-    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.73.0'>Hugo</a> 驱动
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.74.1'>Hugo</a> 驱动
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

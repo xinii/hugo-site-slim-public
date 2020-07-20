@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>My shell migration record - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/en/post/my-shell-migration-record" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="My shell migration record">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="My shell migration record">
 <meta itemprop="description" content="bash -&gt; zsh -&gt; fish">
 <meta itemprop="datePublished" content="2019-05-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-03T00:00:00&#43;00:00" />
@@ -297,20 +298,19 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 From bash to zsh
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 Although I switched to the fish shell two weeks after using the zsh shell
 (the fish shell has a special introduction below),
 this does not deny that the zsh shell is still a good shell.
-You can switch from any shell to zsh shell in the following way.
-</p>
+You can switch from any shell to zsh shell in the following way.</p>
 <ul>
 <li>
-<p>
-Use the following instructions when installing zsh,
-</p>
+<p>Use the following instructions when installing zsh,</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -319,9 +319,7 @@ Use the following instructions when installing zsh,
 </div>
 <ul>
 <li>
-<p>
-If you want to know the shell currently installed in the system, enter the following command,
-</p>
+<p>If you want to know the shell currently installed in the system, enter the following command,</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -329,9 +327,7 @@ If you want to know the shell currently installed in the system, enter the follo
 </div>
 <ul>
 <li>
-<p>
-How to use zsh as your default shell? Enter the following command,
-</p>
+<p>How to use zsh as your default shell? Enter the following command,</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -339,37 +335,27 @@ How to use zsh as your default shell? Enter the following command,
 </div>
 <ul>
 <li>
-<p>
-Error reading about the configuration file
-</p>
+<p>Error reading about the configuration file</p>
 </li>
 </ul>
-<p>
-When the shell script explains the error,
+<p>When the shell script explains the error,
 you can check the currently used <code class="verbatim">sh</code> path.
 For example, it may be that <code class="verbatim">sh</code> points to <code class="verbatim">dash</code>, which causes an error.
-View through the following statement.
-</p>
+View through the following statement.</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  ls -l <span style="color:#e6db74">`</span>which sh<span style="color:#e6db74">`</span></code></pre></div>
 </div>
 <ul>
 <li>
-<p>
-Script interpreter differences in syntax
-</p>
+<p>Script interpreter differences in syntax</p>
 </li>
 </ul>
-<p>
-When switching from traditional bash and other shells to zsh,
+<p>When switching from traditional bash and other shells to zsh,
 you will find that the index of the first element of the collection starts from 1.
-If you want to start from 0, configure the following statement in the configuration file.
-</p>
+If you want to start from 0, configure the following statement in the configuration file.</p>
 <ul>
 <li>
-<p>
-Fix array index for zsh:
-</p>
+<p>Fix array index for zsh:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -377,36 +363,41 @@ Fix array index for zsh:
       setopt localoptions ksharrays
   <span style="color:#66d9ef">fi</span></code></pre></div>
 </div>
+<div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
 Configure zsh
 </h3>
+<div id="outline-text-headline-2" class="outline-text-3">
 <p>
 Similar to the bash shell&#39;s <code class="verbatim">.bashrc</code>,
 the configuration of <code class="verbatim">zsh</code> also requires a configuration file.
 This file is the <code class="verbatim">.zshrc</code> file in the user directory.
-<a href="https://github.com/xinii/xinconfig/blob/master/profile/core/zsh.sh">Click here</a> to open the configuration file I uploaded to Github to download and use.
-</p>
+<a href="https://github.com/xinii/xinconfig/blob/master/profile/core/zsh.sh">Click here</a> to open the configuration file I uploaded to Github to download and use.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 From zsh to fish-shell
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <p>
 After using the zsh shell,
 I switched to the fish shell in about two weeks.
 This is not because zsh is not good, but the natural completion and ease of use of fish attracted me.
-After moving to the fish environment, the shell toss is a conclusion. The following records of the process.
-</p>
+After moving to the fish environment, the shell toss is a conclusion. The following records of the process.</p>
+<div id="outline-container-headline-4" class="outline-3">
 <h3 id="headline-4">
 fish shell installation and default shell switch
 </h3>
+<div id="outline-text-headline-4" class="outline-text-3">
 <p>
 This was mentioned above.
-Now we will introduce the instructions that different operating systems need to execute.
-</p>
+Now we will introduce the instructions that different operating systems need to execute.</p>
 <ul>
 <li>
-<p>
-MacOS:
-</p>
+<p>MacOS:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -414,9 +405,7 @@ MacOS:
 </div>
 <ul>
 <li>
-<p>
-Ubuntu/Linux Mint:
-</p>
+<p>Ubuntu/Linux Mint:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -424,9 +413,7 @@ Ubuntu/Linux Mint:
 </div>
 <ul>
 <li>
-<p>
-OpenSUSE:
-</p>
+<p>OpenSUSE:</p>
 </li>
 </ul>
 <div class="src src-sh">
@@ -435,16 +422,14 @@ OpenSUSE:
 <p>
 If it is an OpenSUSE environment running under Windows,
 you may need <code class="verbatim">root</code> permission, then add <code class="verbatim">sudo</code> in front of the command.
-Use the following statement to view the shell used by the current system.
-</p>
+Use the following statement to view the shell used by the current system.</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  cat /etc/shells</code></pre></div>
 </div>
 <p>
 If your fish shell is displayed at <code class="verbatim">/usr/bin/fish</code>,
 Then execute the following statement to switch it to the default shell
-(add <code class="verbatim">sudo</code> if you have insufficient permissions).
-</p>
+(add <code class="verbatim">sudo</code> if you have insufficient permissions).</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  chsh -s /usr/bin/fish</code></pre></div>
 </div>
@@ -452,54 +437,55 @@ Then execute the following statement to switch it to the default shell
 Now reopen a terminal session and you will find that the default shell has been switched to fish.
 If it reports a lot of errors about hostname immediately after opening the fish shell,
 that is to say, the current environment lacks a package called hostname,
-then use the package manager of the distribution you are using to install <code class="verbatim">hostname</code>, for example, under OpenSUSE,
-</p>
+then use the package manager of the distribution you are using to install <code class="verbatim">hostname</code>, for example, under OpenSUSE,</p>
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  sudo zypper install hostname</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
 <h3 id="headline-5">
 Configuration of Fish shell
 </h3>
+<div id="outline-text-headline-5" class="outline-text-3">
 <p>
-The configuration I wrote was uploaded on Github, <a href="https://github.com/xinii/xinconfig/tree/master/profile/fish">click here</a> to view my configuration.
-</p>
+The configuration I wrote was uploaded on Github, <a href="https://github.com/xinii/xinconfig/tree/master/profile/fish">click here</a> to view my configuration.</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 Common problems when using python under the fish shell
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <p>
-There are two issues that I need to pay attention to at present,
-</p>
+There are two issues that I need to pay attention to at present,</p>
 <ul>
 <li>
-<p>
-About tmux
-</p>
+<p>About tmux</p>
 </li>
 </ul>
-<p>
-When tmux has a session in the background,
+<p>When tmux has a session in the background,
 even if the update <code class="verbatim">PYTHONPATH</code> environment variable will not take effect,
 then all processes of tmux need to be closed before the update will take effect.
 In addition to fish, other shell environments should also be encountered.
-I first appeared in fish and kept it as a record.
-</p>
+I first appeared in fish and kept it as a record.</p>
 <ul>
 <li>
-<p>
-About <code class="verbatim">PYTHONPATH</code>
-</p>
+<p>About <code class="verbatim">PYTHONPATH</code></p>
 </li>
 </ul>
-<p>
-The way to define environment variables in fish shell is <code class="verbatim">set &lt;variable_name&gt; &lt;parameter_1&gt; &lt;parameter_2&gt;</code>
+<p>The way to define environment variables in fish shell is <code class="verbatim">set &lt;variable_name&gt; &lt;parameter_1&gt; &lt;parameter_2&gt;</code>
 This method has great advantages and is very convenient, but for <code class="verbatim">PYTHONPATH</code>,
 then <code class="verbatim">set PYTHONPATH &lt;parameter_1&gt;:&lt;parameter_2&gt;</code> is more versatile.
 The reason is that after testing, both methods can be used normally under MacOS, but it is running on Jetson
 When testing under Ubuntu on Nano, only the second method is available.
 The specific reason is not yet clear, there may be different reasons for the operating system,
 It may also be caused by different python versions
-(For example, the version number is the same, but the different processor architectures cause differences in compilation methods and cause this problem).
-</p>
+(For example, the version number is the same, but the different processor architectures cause differences in compilation methods and cause this problem).</p>
+</div>
+</div>
+</div>
+</div>
 
   </div>
   <hr>
@@ -865,7 +851,7 @@ It may also be caused by different python versions
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

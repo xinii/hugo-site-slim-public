@@ -17,7 +17,9 @@
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://xinii.github.io/hugo-site-slim-public/blog/shell/my-shell-migration-record/</guid>
-      <description>From bash to zsh   Although I switched to the fish shell two weeks after using the zsh shell (the fish shell has a special introduction below), this does not deny that the zsh shell is still a good shell. You can switch from any shell to zsh shell in the following way.    Use the following instructions when installing zsh,   brew install zsh (MacOS) apt install zsh (Ubuntu / Linux Mint)     If you want to know the shell currently installed in the system, enter the following command,   cat /etc/shells     How to use zsh as your default shell?</description>
+      <description>From bash to zsh   Although I switched to the fish shell two weeks after using the zsh shell (the fish shell has a special introduction below), this does not deny that the zsh shell is still a good shell. You can switch from any shell to zsh shell in the following way.
+  Use the following instructions when installing zsh,
+  brew install zsh (MacOS) apt install zsh (Ubuntu / Linux Mint)    If you want to know the shell currently installed in the system, enter the following command,</description>
     </item>
     
   </channel>

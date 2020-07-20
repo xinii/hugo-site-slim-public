@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>为 Fish 和 Emacs 添加 apt 仓库 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/zh-cn/post/add-apt-repository-for-fish-and-emacs" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="为 Fish 和 Emacs 添加 apt 仓库">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="为 Fish 和 Emacs 添加 apt 仓库">
 <meta itemprop="description" content="想安装 Emacs26 或 Fish 3.0 却发现 apt 提示已经安装最新版本？来试试本文的方法吧！">
 <meta itemprop="datePublished" content="2020-06-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-03T00:00:00&#43;00:00" />
@@ -295,40 +296,64 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 将要使用的命令
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  add-apt-repository</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 没这个命令？先试试这个
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  apt install software-properties-common</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 安装过程
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<div id="outline-container-headline-4" class="outline-3">
 <h3 id="headline-4">
 注册仓库
 </h3>
+<div id="outline-text-headline-4" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  add-apt-repository ppa:kelleyk/emacs
   apt-add-repository ppa:fish-shell/release-3</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
 <h3 id="headline-5">
 刷新仓库
 </h3>
+<div id="outline-text-headline-5" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  apt update</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 安装
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <div class="src src-sh">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  apt install emacs26
   apt install fish</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
   </div>
@@ -693,7 +718,7 @@
         xin iDEA iNNATA
       
     . <br>
-    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.73.0'>Hugo</a> 驱动
+    主题: <a href='https://themes.gohugo.io/hugo-future-imperfect-slim/' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>移植自 <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | 由 <a href='https://gohugo.io/' target='_blank' rel='noopener' title='0.74.1'>Hugo</a> 驱动
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

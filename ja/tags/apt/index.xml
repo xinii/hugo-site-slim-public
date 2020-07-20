@@ -17,7 +17,7 @@
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xinii.github.io/hugo-site-slim-public/ja/blog/linux/add-apt-repository-for-fish-and-emacs/</guid>
-      <description> 使う予定のコマンド  add-apt-repository  このコマンドがない？以下のようにコマンドを入れる  apt install software-properties-common  以下のステップに従ってインストール  リポジトリを登録  add-apt-repository ppa:kelleyk/emacs apt-add-repository ppa:fish-shell/release-3  リポジトリを更新  apt update  必要なものをインストール  apt install emacs26 apt install fish  </description>
+      <description> 使う予定のコマンド  add-apt-repository    このコマンドがない？以下のようにコマンドを入れる  apt install software-properties-common    以下のステップに従ってインストール  リポジトリを登録  add-apt-repository ppa:kelleyk/emacs apt-add-repository ppa:fish-shell/release-3    リポジトリを更新  apt update    必要なものをインストール  apt install emacs26 apt install fish      </description>
     </item>
     
   </channel>

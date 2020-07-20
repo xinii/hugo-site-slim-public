@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>より効率的な作業を行うためのいくつかWindowsのレジストリー設定 - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/ja/post/several-windows-registry-configurations" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="より効率的な作業を行うためのいくつかWindowsのレジストリー設定">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="より効率的な作業を行うためのいくつかWindowsのレジストリー設定">
 <meta itemprop="description" content="Windowsのシステム環境設定だけではなかなか叶えない機能だけど，重くなるのでサードパーティ製のソフトウェアも使いたくない？レジストリーを使いこなそう！">
 <meta itemprop="datePublished" content="2020-06-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-06-04T00:00:00&#43;00:00" />
@@ -305,25 +306,30 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 日本語キーボードのレイアウトに関するレジストリー設定
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
 <h3 id="headline-2">
 スキャンコードについて
 </h3>
+<div id="outline-text-headline-2" class="outline-text-3">
 <p>
-まずは，ウィキペディアに載せたスキャンコードの定義を見よう
-</p>
+まずは，ウィキペディアに載せたスキャンコードの定義を見よう</p>
 <blockquote>
-<p>
-スキャンコード (scancode)
+<p>スキャンコード (scancode)
   とは、コンピュータのキーボードのキーが押されたり離されたりしたときに、
-  キーボードからCPUに送られるコード（符号）のこと。走査コード（そうさコード）ともいう。 - <a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%89">Wikipedia</a>
-</p>
+  キーボードからCPUに送られるコード（符号）のこと。走査コード（そうさコード）ともいう。 - <a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%89">Wikipedia</a></p>
 </blockquote>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
 <h3 id="headline-3">
 スキャンコードの例<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup>
 </h3>
+<div id="outline-text-headline-3" class="outline-text-3">
 <table>
 <thead>
 <tr>
@@ -374,36 +380,33 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
 <h3 id="headline-4">
 レジストリーでスキャンコードのマッピングを行うためには
 </h3>
+<div id="outline-text-headline-4" class="outline-text-3">
 <ul>
 <li>
-<p>
-まず， <code class="verbatim">Win key</code> + <code class="verbatim">R</code> を押して <code class="verbatim">regedit</code> を入力したら <code class="verbatim">Enter</code> キーを押す。
+<p>まず， <code class="verbatim">Win key</code> + <code class="verbatim">R</code> を押して <code class="verbatim">regedit</code> を入力したら <code class="verbatim">Enter</code> キーを押す。
 そうすると，Windowsのレジストリーエディターが開かれたはず。
-そこでレジストリーエディターで以下の場所を開く。
-</p>
+そこでレジストリーエディターで以下の場所を開く。</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  コンピューター\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-次に，右クリックしたら，「新規 - バイナリ値(B) - Scancode
-Map」の順に「Scancode Map」というバイナリキーを作る。
-</p>
+<p>次に，右クリックしたら，「新規 - バイナリ値(B) - Scancode
+Map」の順に「Scancode Map」というバイナリキーを作る。</p>
 <p>
 「Scancode Map」のバリュー（マッピングのルール）については，
 以下のような僕の設定を参考していじってみればいいと思う。
 ただし，「バージョン」，「フラグ」と「終端ヌル値」の部分は残る必要がある。
-あと，「マッピング数」については，「終端ヌル値」も含めて設定したマッピングルールの数を数えて書けば良い。
-</p>
+あと，「マッピング数」については，「終端ヌル値」も含めて設定したマッピングルールの数を数えて書けば良い。</p>
 </li>
 <li>
-<p>
-Logicool K380のための自分用レイアウト
-</p>
+<p>Logicool K380のための自分用レイアウト</p>
 <table>
 <thead>
 <tr>
@@ -461,9 +464,7 @@ Logicool K380のための自分用レイアウト
 </table>
 </li>
 <li>
-<p>
-FILCO Majestouch MINILA Airのための自分用レイアウト
-</p>
+<p>FILCO Majestouch MINILA Airのための自分用レイアウト</p>
 <table>
 <thead>
 <tr>
@@ -528,38 +529,38 @@ FILCO Majestouch MINILA Airのための自分用レイアウト
 </table>
 </li>
 <li>
-<p>
-ここで，「Pause/Break」がいつくかのコードで組み合わせたもので，
+<p>ここで，「Pause/Break」がいつくかのコードで組み合わせたもので，
 「NumLock」のコードも入っているため，
-以上のように設定する時に少し工夫をした。 以下も参考
-</p>
+以上のように設定する時に少し工夫をした。 以下も参考</p>
 <blockquote>
-<p>
-Pause <code>0xE1:0x1D:0x45</code> [ 84key <code>Ctrl</code> (0x1D) + <code>NumLock</code> (0x45)], no auto repeat,
-break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d/Keyboard%20Scancode%20Map">Keyboard Scancode Map</a>
-</p>
+<p>Pause <code>0xE1:0x1D:0x45</code> [ 84key <code>Ctrl</code> (0x1D) + <code>NumLock</code> (0x45)], no auto repeat,
+break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d/Keyboard%20Scancode%20Map">Keyboard Scancode Map</a></p>
 </blockquote>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
 <h2 id="headline-5">
 キーボードレイアウトの種類を変更
 </h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<div id="outline-container-headline-6" class="outline-3">
 <h3 id="headline-6">
 中国語入力において英語配列から日本語配列に
 </h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <ul>
 <li>
-<p>
-まずは，レジストリーエディターで以下の場所を開く
-</p>
+<p>まずは，レジストリーエディターで以下の場所を開く</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  コンピューター\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Keyboard Layouts\00000804</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-次に，以下のように変更をする
-</p>
+<p>次に，以下のように変更をする</p>
 <table>
 <thead>
 <tr>
@@ -578,46 +579,52 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
 </table>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-3">
 <h3 id="headline-7">
 他の言語の入力法において〇〇配列から〇〇配列に
 </h3>
+<div id="outline-text-headline-7" class="outline-text-3">
 <ul>
 <li>
-<p>
-他の言語の入力法の場合は，レジストリーのパスの=00000804=のところを変更し，
-変更後の=***.DLL=の部分に適切な内容で入れ替えたら良いと思う。
-</p>
+<p>他の言語の入力法の場合は，レジストリーのパスの=00000804=のところを変更し，
+変更後の=***.DLL=の部分に適切な内容で入れ替えたら良いと思う。</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
 <h2 id="headline-8">
 「マイコンピュータ」や「PC」の画面に不明なアイコンが出た時のレジストリー設定
 </h2>
+<div id="outline-text-headline-8" class="outline-text-2">
 <ul>
 <li>
-<p>
-以下のレジストリーのパスに，その不明なものを探して見つけたら見つけたものを削除すれば良い
-</p>
+<p>以下のレジストリーのパスに，その不明なものを探して見つけたら見つけたものを削除すれば良い</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  コンピューター\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</code></pre></div>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
 <h2 id="headline-9">
 どうしてもローカルネットワークのNASとかに繋がらない時のレジストリー設定<sup class="footnote-reference"><a id="footnote-reference-2" href="#footnote-2">2</a></sup>
 </h2>
+<div id="outline-text-headline-9" class="outline-text-2">
 <ul>
 <li>
-<p>
-まずは，以下の場所を開く
-</p>
+<p>まずは，以下の場所を開く</p>
 <div class="src src-text">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">  コンピューター\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters</code></pre></div>
 </div>
 </li>
 <li>
-<p>
-次に，下のような変更を行う
-</p>
+<p>次に，下のような変更を行う</p>
 <table>
 <thead>
 <tr>
@@ -636,43 +643,39 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
 </table>
 </li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-2">
 <h2 id="headline-10">
 参考資料
 </h2>
+<div id="outline-text-headline-10" class="outline-text-2">
 <ul>
 <li>
-<p>
-<a href="https://usedoor.jp/howto/digital/pc/windows-uwagaki-keyboard-insert-key-mukouka/">上書きモードになる『Insert』キーを無効化する方法</a>
-</p>
+<p><a href="https://usedoor.jp/howto/digital/pc/windows-uwagaki-keyboard-insert-key-mukouka/">上書きモードになる『Insert』キーを無効化する方法</a></p>
 </li>
 <li>
-<p>
-<a href="https://tepp91.github.io/contents/misc/remap-keyboard-with-scancode-map.html">Scancode Mapによるキー割り当ての変更</a>
-</p>
+<p><a href="https://tepp91.github.io/contents/misc/remap-keyboard-with-scancode-map.html">Scancode Mapによるキー割り当ての変更</a></p>
 </li>
 <li>
-<p>
-<a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-files/homegroup-removed-how-to-get-network-sharing-work/01277332-2916-4a68-853a-116696b20743">Homegroup removed! How to get network sharing work with Windows 10 v1803</a>
-</p>
+<p><a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-files/homegroup-removed-how-to-get-network-sharing-work/01277332-2916-4a68-853a-116696b20743">Homegroup removed! How to get network sharing work with Windows 10 v1803</a></p>
 </li>
 </ul>
+</div>
+</div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
 <div class="footnote-definitions">
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="http://softwaretechnique.jp/OS_Development/Tips/scan_code_set1.html">スキャンコード一覧（スキャンコードセット1）</a>
-</p>
+<p><a href="http://softwaretechnique.jp/OS_Development/Tips/scan_code_set1.html">スキャンコード一覧（スキャンコードセット1）</a></p>
 </div>
 </div>
 <div class="footnote-definition">
 <sup id="footnote-2"><a href="#footnote-reference-2">2</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://www.nedia.ne.jp/blog/2019/04/02/13919">NASに接続できない！原因はSMB1.0ではなかった！</a>
-</p>
+<p><a href="https://www.nedia.ne.jp/blog/2019/04/02/13919">NASに接続できない！原因はSMB1.0ではなかった！</a></p>
 </div>
 </div>
 </div>
@@ -1110,7 +1113,7 @@ break code <code>0xE1:0x9D:0xC5</code> - <a href="https://seesaawiki.jp/w/smnb/d
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

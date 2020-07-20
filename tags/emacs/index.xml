@@ -17,7 +17,7 @@
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xinii.github.io/hugo-site-slim-public/blog/linux/add-apt-repository-for-fish-and-emacs/</guid>
-      <description> Command to be use  add-apt-repository  No this command? Do this first  apt install software-properties-common  Process  Register repository  add-apt-repository ppa:kelleyk/emacs apt-add-repository ppa:fish-shell/release-3  Refresh repository  apt update  Installation  apt install emacs26 apt install fish  </description>
+      <description> Command to be use  add-apt-repository    No this command? Do this first  apt install software-properties-common    Process  Register repository  add-apt-repository ppa:kelleyk/emacs apt-add-repository ppa:fish-shell/release-3    Refresh repository  apt update    Installation  apt install emacs26 apt install fish      </description>
     </item>
     
   </channel>

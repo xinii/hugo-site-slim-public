@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
 <title>Install Gnutls and compile Emacs from source - xin iDEA iNNATA</title>
+<meta http-equiv="refresh" content="0; url=https://xinii.cf/en/post/install-gnutls-and-compile-emacs-from-source" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -18,7 +19,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.73.0" /><meta itemprop="name" content="Install Gnutls and compile Emacs from source">
+<meta name="generator" content="Hugo 0.74.1" /><meta itemprop="name" content="Install Gnutls and compile Emacs from source">
 <meta itemprop="description" content="Gnutls errors when compiling Emacs from source? Let me take a closer look at what is going on!">
 <meta itemprop="datePublished" content="2019-05-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-04T00:00:00&#43;00:00" />
@@ -289,73 +290,78 @@
 </nav>
     <hr>
     
+<div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
 The lack of Gnutls in the environment
 </h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>
 If the current environment lacks Gnutls, the following configuration is
-required before compiling and installing the Emacs<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> source code.
-</p>
+required before compiling and installing the Emacs<sup class="footnote-reference"><a id="footnote-reference-1" href="#footnote-1">1</a></sup> source code.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  ./configure --with-gnutls<span style="color:#f92672">=</span>no</code></pre></div>
 </div>
 <p>
 Or specify the installation directory at the same time, add the option
 to ignore other dependent libraries that are still missing, such as the
-following configuration.
-</p>
+following configuration.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  bash configure --prefix<span style="color:#f92672">=</span>$HOME/.local --with-gif<span style="color:#f92672">=</span>no --with-gnutls<span style="color:#f92672">=</span>no</code></pre></div>
 </div>
 <p>
 In this way, the configuration and installation can be carried out
 smoothly in the absence of permission to the default installation path,
-or the lack of various dependent libraries.
-</p>
+or the lack of various dependent libraries.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
 <h2 id="headline-2">
 Potential problems
 </h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <p>
 Although the above can achieve the purpose of normal installation of
 Emacs to the <code class="verbatim">$HOME/.local</code> directory, However, due to the lack of the
 Gnutls component, when using network transmission in Emacs, you can only
-use http instead of https.
-</p>
+use http instead of https.</p>
 <p>
 If only needs a network connection during Emacs initialization, you can
 solve the problem by changing the Melpa links to start with http, but
 this will cause problems for future extensions that require network
-connectivity in Emacs.
-</p>
+connectivity in Emacs.</p>
 <p>
 For example, when using <code class="verbatim">google-translate</code>, even if the <code class="verbatim">https</code> in all
 <code class="verbatim">*.el</code> files in the <code class="verbatim">google-translate</code> package are changed to <code class="verbatim">http</code>,
 during actual use, some <code class="verbatim">https</code> services will still be used
-automatically, resulting in abnormal translation.
-</p>
+automatically, resulting in abnormal translation.</p>
 <p>
 One thing to note here is that after modifying the <code class="verbatim">*.el</code> file, you need
 to delete all <code class="verbatim">*.elc</code> files to force a recompilation to make the changes
-take effect.
-</p>
+take effect.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
 <h2 id="headline-3">
 Install Gnutls
 </h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <p>
 After the above actual tests, it is not difficult to find that it is a
 good choice to install Emacs from the source code after installing
-Gnutls in the current environment.
-</p>
+Gnutls in the current environment.</p>
 <p>
 Taking OpenSUSE as an example, Gnutls can be installed by running the
-following statement on the terminal.
-</p>
+following statement on the terminal.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  sudo zypper install gnutls</code></pre></div>
 </div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
 <h2 id="headline-4">
 Other possible problems
 </h2>
+<div id="outline-text-headline-4" class="outline-text-2">
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  checking <span style="color:#66d9ef">for</span> library containing tputs... no
   configure: error: The required <span style="color:#66d9ef">function</span> <span style="color:#e6db74">&#39;tputs&#39;</span> was not found in any library.
@@ -371,10 +377,11 @@ Other possible problems
 Besides, if Gnutls is installed in the current environment, and the
 above error is still reported after <code class="verbatim">make</code>, then for OpenSUSE
 environment, you need a package called <code class="verbatim">ncurses-devel</code>, execute the
-following sentence to install.
-</p>
+following sentence to install.</p>
 <div class="src src-bash">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  sudo zypper install ncurses-devel</code></pre></div>
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr class="footnotes-separatator">
@@ -382,9 +389,7 @@ following sentence to install.
 <div class="footnote-definition">
 <sup id="footnote-1"><a href="#footnote-reference-1">1</a></sup>
 <div class="footnote-body">
-<p>
-<a href="https://ja.wikipedia.org/wiki/Emacs">The logo of Emacs</a>
-</p>
+<p><a href="https://ja.wikipedia.org/wiki/Emacs">The logo of Emacs</a></p>
 </div>
 </div>
 </div>
@@ -750,7 +755,7 @@ following sentence to install.
         xin iDEA iNNATA
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.73.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.74.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
