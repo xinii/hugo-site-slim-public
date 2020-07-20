@@ -12,11 +12,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/about/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="en"
                 href="https://xinii.github.io/hugo-site-slim-public/about/"
                 />
@@ -32,8 +27,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/activation/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/activation/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -52,8 +47,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/autohotkey/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/autohotkey/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -72,8 +67,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -92,8 +87,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -112,8 +107,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/keyboard-layout/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/keyboard-layout/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -132,8 +127,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/msys2/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/msys2/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -152,8 +147,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/registry/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/registry/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -172,8 +167,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/ricty/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/ricty/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -192,8 +187,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/scancode/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/scancode/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -212,8 +207,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/windows/several-windows-registry-configurations/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/windows/several-windows-registry-configurations/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -232,8 +227,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/windows/some-installations-for-windows-10/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/windows/some-installations-for-windows-10/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -252,8 +247,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -272,8 +267,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/windows/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/windows/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -292,8 +287,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -312,8 +307,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/linux/add-apt-repository-for-fish-and-emacs/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/linux/add-apt-repository-for-fish-and-emacs/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -332,8 +327,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/android/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/android/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -352,8 +347,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/apt/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/apt/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -372,8 +367,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/daemon/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/daemon/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -392,8 +387,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/emacs/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/emacs/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -412,8 +407,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/fish-shell/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/fish-shell/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -432,8 +427,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/keygen/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/keygen/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -452,8 +447,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/linux/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/linux/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -472,8 +467,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/ssh/several-ssh-configurations/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/ssh/several-ssh-configurations/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -492,8 +487,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/ssh/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/ssh/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -512,8 +507,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/termux/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/termux/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -532,8 +527,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/opencv/install-opencv-on-jetson-nano/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/opencv/install-opencv-on-jetson-nano/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -552,8 +547,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/jetson-nano/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/jetson-nano/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -572,8 +567,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/opencv/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/opencv/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -592,8 +587,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/python/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/python/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -612,8 +607,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/compile/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/compile/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -632,8 +627,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/emacs/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/emacs/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -652,8 +647,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/gnutls/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/gnutls/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -672,8 +667,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/emacs/install-gnutls-and-compile-emacs-from-source/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/emacs/install-gnutls-and-compile-emacs-from-source/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -692,8 +687,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/bash/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/bash/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -712,8 +707,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/shell/my-shell-migration-record/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/shell/my-shell-migration-record/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -732,8 +727,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/shell/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/shell/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -752,8 +747,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/tmux/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/tmux/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -772,8 +767,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/zsh/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/zsh/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -792,8 +787,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/linux/install-linux-mint-from-the-usb-device/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/linux/install-linux-mint-from-the-usb-device/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -812,8 +807,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/linux-mint/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/linux-mint/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -832,8 +827,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/os/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/os/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -852,8 +847,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/rufus/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/rufus/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -872,8 +867,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/usb/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/usb/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -892,8 +887,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/blog/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/blog/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -912,8 +907,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/categories/cms/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/categories/cms/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -932,8 +927,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/blog/cms/create-a-blog-by-jekyll-and-publish-to-github/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/blog/cms/create-a-blog-by-jekyll-and-publish-to-github/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -952,8 +947,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/github/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/github/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -972,8 +967,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/tags/jekyll/"
+                hreflang="zh"
+                href="https://xinii.github.io/hugo-site-slim-public/zh/tags/jekyll/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -988,11 +983,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://xinii.github.io/hugo-site-slim-public/ja/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://xinii.github.io/hugo-site-slim-public/zh-cn/contact/"
                 />
     <xhtml:link
                 rel="alternate"
